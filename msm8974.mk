@@ -86,6 +86,20 @@ PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
+# Connectivity Engine support
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig \
+    services-ext
+
+PRODUCT_PROPERTIES_OVERRIDES += persist.cne.feature=1
+
+# Crda
+PRODUCT_PACKAGES += \
+    crda \
+    linville.key.pub.pem \
+    regdbdump \
+    regulatory.bin
+
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     make_ext4fs \
