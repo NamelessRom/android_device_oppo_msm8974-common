@@ -223,6 +223,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES +=
     persist.cne.feature=1
 
+# Crda
+PRODUCT_PACKAGES += \
+    crda \
+    linville.key.pub.pem \
+    regdbdump \
+    regulatory.bin
+
 # Enable Bluetooth HFP service
 PRODUCT_PROPERTY_OVERRIDES +=
     bluetooth.hfp.client=1
