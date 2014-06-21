@@ -156,10 +156,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
-# Power
-PRODUCT_PACKAGES += \
-    power.msm8974
-
 # QRNGD
 PRODUCT_PACKAGES += \
     qrngd \
