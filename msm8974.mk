@@ -159,7 +159,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8974
+    power.oppo
 
 # QRNGD
 PRODUCT_PACKAGES += \
