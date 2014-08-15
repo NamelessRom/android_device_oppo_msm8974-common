@@ -6,12 +6,6 @@
     "revision": "android-4.4"
   },
   {
-    "remote": "nameless",
-    "repository": "android_kernel_oneplus_msm8974",
-    "target_path": "kernel/oneplus/msm8974",
-    "revision": "android-4.4"
-  },
-  {
     "remote": "github",
     "repository": "CyanogenMod/android_hardware_qcom_display-caf-new",
     "target_path": "hardware/qcom/display-caf-new",
