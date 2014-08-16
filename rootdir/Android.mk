@@ -1,4 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
+
+ifeq ($(TARGET_DEVICE),bacon)
+
 include $(CLEAR_VARS)
 
 # QCOM config scripts
@@ -42,3 +45,5 @@ LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init.cne.rc
 include $(BUILD_PREBUILT)
+
+endif

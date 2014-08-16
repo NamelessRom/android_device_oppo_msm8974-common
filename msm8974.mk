@@ -27,16 +27,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# Config scripts
-PRODUCT_PACKAGES += \
-    init.qcom.bt.sh
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.qcom-common.rc \
-    init.recovery.qcom.rc \
-    ueventd.qcom.rc
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
@@ -80,11 +70,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true \
     audio.offload.pcm.enable=true \
     audio.offload.24bit.enable=1
-
-# Charger
-PRODUCT_PACKAGES += \
-    charger \
-    charger_res_images
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -156,10 +141,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
-# Power
-PRODUCT_PACKAGES += \
-    power.msm8974
-
 # QRNGD
 PRODUCT_PACKAGES += \
     qrngd \
@@ -181,7 +162,28 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+# Bacon only
+
 ifeq ($(TARGET_DEVICE),bacon)
+
+# Config scripts
+PRODUCT_PACKAGES += \
+    init.qcom.bt.sh
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.qcom-common.rc \
+    init.recovery.qcom.rc \
+    ueventd.qcom.rc
+
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8974
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images
 
 # WiFi
 PRODUCT_COPY_FILES += \
