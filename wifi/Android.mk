@@ -1,5 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
 
+ifeq ($(TARGET_DEVICE),bacon)
+
 #----------------------------------------------------------------------
 # Copy additional target-specific files
 #----------------------------------------------------------------------
@@ -44,4 +46,5 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
 LOCAL_SRC_FILES    := hostapd.deny
 include $(BUILD_PREBUILT)
 
+endif
 endif
