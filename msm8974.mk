@@ -197,6 +197,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     wcnss_service
 
+# Logo
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/logo.bin:system/logo.bin
+
 # Misc dependency packages
 PRODUCT_PACKAGES += \
     ebtables \

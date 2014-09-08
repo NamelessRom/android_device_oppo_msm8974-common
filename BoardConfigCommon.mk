@@ -126,6 +126,9 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/msm8974-common
+
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
