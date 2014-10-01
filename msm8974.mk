@@ -29,7 +29,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Config scripts
 PRODUCT_PACKAGES += \
-    init.qcom.bt.sh
+    init.qcom.bt.sh \
+    brick.device.sh \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
