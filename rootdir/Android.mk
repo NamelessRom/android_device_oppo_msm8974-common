@@ -42,3 +42,13 @@ LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init.cne.rc
 include $(BUILD_PREBUILT)
+
+# Extra init files
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := brick.device.sh
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/brick.device.sh
+LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
+include $(BUILD_PREBUILT)
