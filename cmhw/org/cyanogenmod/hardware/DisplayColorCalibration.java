@@ -20,7 +20,6 @@ import org.cyanogenmod.hardware.util.FileUtils;
 
 public class DisplayColorCalibration {
     private static final String COLOR_FILE = "/sys/devices/platform/kcal_ctrl.0/kcal";
-    private static final String COLOR_FILE_CTRL = "/sys/devices/platform/kcal_ctrl.0/kcal_ctrl";
 
     public static boolean isSupported() {
         return true;
@@ -39,9 +38,6 @@ public class DisplayColorCalibration {
         return FileUtils.readOneLine(COLOR_FILE);
     }
     public static boolean setColors(String colors)  {
-        if (!FileUtils.writeLine(COLOR_FILE, colors)) {
-            return false;
-        }
-        return FileUtils.writeLine(COLOR_FILE_CTRL, "1");
+        return FileUtils.writeLine(COLOR_FILE, colors);
     }
 }
