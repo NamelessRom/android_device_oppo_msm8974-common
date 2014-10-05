@@ -60,6 +60,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
+    libqcompostprocbundle \
     libqcomvoiceprocessing \
     tinymix
 
