@@ -20,6 +20,7 @@ import org.cyanogenmod.hardware.util.FileUtils;
 
 public class DisplayColorCalibration {
     private static final String COLOR_FILE = "/sys/devices/platform/kcal_ctrl.0/kcal";
+    private static final String COLOR_MIN = "/sys/devices/platform/kcal_ctrl.0/kcal_min";
 
     public static boolean isSupported() {
         return true;
@@ -29,7 +30,14 @@ public class DisplayColorCalibration {
         return 255;
     }
     public static int getMinValue()  {
-        return 0;
+        int ret = 25;
+        try {
+            Scanner s = new Scanner(new File(COLOR_MIN));
+            ret = s.nextInt();
+            s.close();
+        } catch (Exception ex) { }
+
+        return ret;
     }
     public static int getDefValue() {
         return getMaxValue();
