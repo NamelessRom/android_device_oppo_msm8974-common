@@ -528,7 +528,7 @@ service bugreport /system/bin/dumpstate -d -p -B \
 service mpdecision /system/bin/mpdecision --avg_comp
    class main
    user root
-   group system
+   group root system
    disabled
 
 service thermal-engine /system/bin/thermal-engine
