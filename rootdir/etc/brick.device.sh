@@ -7,7 +7,10 @@ export PATH
 
 busybox mount -o rw,remount /system
 
-# kill thermal-engine as we have a kernel built-in solution
+# kill thermal-engine as we have a built-in kernel solution
 mv /system/bin/thermal-engine /system/bin/thermal-engine.bak 2> /dev/null
 
 busybox mount -o ro,remount /system
+
+# stop mpdecision as we have a built-in kernel solution
+stop mpdecision
