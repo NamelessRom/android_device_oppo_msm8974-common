@@ -323,6 +323,10 @@ on property:init.svc.bootanim=stopped
     write /sys/block/mmcblk0/queue/iosched/front_merges 0
     write /sys/block/mmcblk0/queue/iosched/writes_starved 8
 
+    # Flash storage isn't a good entropy source, and only causes locking
+    # overhead in the kernel. Turn it off.
+    write /sys/block/mmcblk0/queue/add_random 0
+
     # Do not start mpdecision as we have a built-in kernel solution
     #start mpdecision
 
