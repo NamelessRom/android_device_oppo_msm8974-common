@@ -154,10 +154,6 @@ on post-fs-data
     #  bluetooth
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
 
-    # Create directory used by audio subsystem
-    mkdir /data/misc/audio 0770 audio audio
-    restorecon_recursive /data/misc/audio
-
     # Create directory used by sensor subsystem
     mkdir /persist/sensors 0775 system root
     write /persist/sensors/sensors_settings 1
@@ -165,6 +161,10 @@ on post-fs-data
     chown system root /persist/sensors/sensors_settings
     mkdir /data/misc/sensors 0775 system system
     restorecon_recursive /data/misc/sensors
+
+    # Create directory used by audio subsystem
+    mkdir /data/misc/audio 0770 audio audio
+    restorecon_recursive /data/misc/audio
 
     # Create the directories used by the Wireless subsystem
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -347,12 +347,12 @@ service rfs_access /system/bin/rfs_access
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
-    class main
+    class late_start
     user radio
     group radio audio bluetooth gps qcom_diag
 
 service netmgrd /system/bin/netmgrd
-    class main
+    class late_start
     user root
     group radio
 
@@ -372,7 +372,7 @@ service cnd /system/bin/cnd
     socket cnd stream 660 root inet
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
-    class main
+    class late_start
     user root
     oneshot
 
