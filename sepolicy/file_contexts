@@ -39,7 +39,3 @@
 /system/bin/cnd                        u:object_r:cne_exec:s0
 /dev/socket/cnd                        u:object_r:cne_socket:s0
 /data/connectivity(/.*)?               u:object_r:cne_data_file:s0
-
-# Disk encryption
-/dev/qseecom                           u:object_r:qseecom_device:s0
-/dev/fscklogs(/.*)?                    u:object_r:fscklogs:s0
