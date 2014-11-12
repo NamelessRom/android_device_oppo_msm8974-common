@@ -1,6 +1,12 @@
 [
   {
     "remote": "github",
+    "repository": "android_device_qcom_sepolicy",
+    "target_path": "device/qcom/sepolicy",
+    "revision": "cm-12.0"
+  },
+  {
+    "remote": "github",
     "repository": "NamelessRom/android_device_oppo_common",
     "target_path": "device/oppo/common",
     "revision": "n-2.0"
@@ -14,7 +20,7 @@
   {
     "remote": "github",
     "repository": "CyanogenMod/android_hardware_qcom_audio",
-    "target_path": "hardware/qcom/audio-caf/default",
+    "target_path": "hardware/qcom/audio-caf/msm8974",
     "revision": "cm-12.0-caf-8974"
   },
   {
