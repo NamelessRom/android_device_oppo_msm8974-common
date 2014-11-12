@@ -57,6 +57,7 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    sound_trigger.primary \
     tinymix
 
 PRODUCT_PROPERTY_OVERRIDES += \
