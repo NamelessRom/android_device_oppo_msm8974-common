@@ -247,6 +247,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.call_ring.delay=5000 \
     ro.vendor.extension_library=libqti-perfd-client.so \
+    config.disable_atlas=true \
 
 # Permissions
 PRODUCT_COPY_FILES += \
