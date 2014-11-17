@@ -245,7 +245,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=15 \
     ro.qualcomm.perf.cores_online=2 \
     ro.telephony.call_ring.multiple=false \
-    ro.telephony.call_ring.delay=5000
+    ro.telephony.call_ring.delay=5000 \
+    config.disable_atlas=true \
 
 # Permissions
 PRODUCT_COPY_FILES += \
