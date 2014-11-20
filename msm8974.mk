@@ -75,7 +75,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true \
     audio.offload.pcm.enable=true \
     audio.offload.24bit.enable=1 \
-    media.aaccodectype=1
+    media.aaccodectype=0
 
 # Charger
 PRODUCT_PACKAGES += \
