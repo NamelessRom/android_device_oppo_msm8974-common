@@ -18,8 +18,6 @@ package org.cyanogenmod.hardware;
 
 import org.cyanogenmod.hardware.util.FileUtils;
 
-import android.os.SystemProperties;
-
 import java.io.File;
 
 /**
@@ -35,13 +33,7 @@ public class ColorEnhancement {
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() {
-        File f = new File(FILE_CE);
-
-        if(f.exists()) {
-            return true;
-        } else {
-            return false;
-        }
+        return new File(FILE_CE).exists();
     }
 
     /**
