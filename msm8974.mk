@@ -58,12 +58,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
-PRODUCT_PACKAGES += \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc
-
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     mm.enable.qcom_parser=3314291 \
@@ -90,11 +84,6 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     e2fsck \
     setup_fs
-
-PRODUCT_PACKAGES += \
-    libxml2
-#    libbson \
-#    libcurl \
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -208,7 +197,8 @@ PRODUCT_PACKAGES += \
     curl \
     libnl_2 \
     libbson \
-    libcnefeatureconfig
+    libcnefeatureconfig \
+    libxml2
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
