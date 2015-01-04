@@ -230,9 +230,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.delay=5000 \
     ro.vendor.extension_library=libqti-perfd-client.so \
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qti.sensors.ir_proximity=true
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
