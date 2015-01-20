@@ -186,3 +186,7 @@
 
 # NFC
 /dev/pn544                0600   nfc        nfc
+
+# Random
+/dev/erandom              0666   root       root
+/dev/frandom              0666   root       root
