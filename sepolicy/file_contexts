@@ -13,3 +13,6 @@
 
 /persist/.genmac                                u:object_r:wifi_data_file:s0
 /persist/.bt_nv.bin                             u:object_r:bluetooth_data_file:s0
+
+# frandom
+/dev/frandom                                    u:object_r:frandom_device:s0
