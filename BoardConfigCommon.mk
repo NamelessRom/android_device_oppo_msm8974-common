@@ -134,6 +134,18 @@ PROTOBUF_SUPPORTED := true
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# Enable transparent compression in the build
+TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
+
+# Enable dexpreopt to speed boot time
+ifeq ($(HOST_OS),linux)
+  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user userdebug),true)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+
 # inherit from the proprietary version
 ifneq ($(QCPATH),)
 -include $(QCPATH)/common/msm8974/BoardConfigVendor.mk
