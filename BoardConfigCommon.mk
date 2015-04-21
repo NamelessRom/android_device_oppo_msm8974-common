@@ -135,7 +135,7 @@ PROTOBUF_SUPPORTED := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # Enable transparent compression in the build
-TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
+# TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
