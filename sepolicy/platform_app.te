@@ -1,0 +1,1 @@
+allow platform_app proc_touchpanel:dir search;
