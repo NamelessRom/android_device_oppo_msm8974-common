@@ -158,4 +158,7 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         device/oppo/msm8974-common/sepolicy
 
+# Increase audit rate limit while in development
+TARGET_SELINUX_CUSTOM_AUDIT_RATE := 100
+
 -include vendor/oppo/msm8974-common/BoardConfigVendor.mk
