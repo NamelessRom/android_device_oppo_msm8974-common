@@ -3,3 +3,6 @@ allow system_app proc_touchpanel:file rw_file_perms;
 
 # ConfigPanel
 allow system_app default_prop:property_service set;
+
+# KCAL
+allow system_app sysfs:file rw_file_perms;
