@@ -430,6 +430,9 @@ on property:init.svc.bootanim=stopped
     write /sys/module/cpu_boost/parameters/input_boost_ms 80
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
 
+    write /sys/kernel/cpu_input_boost/boost_freqs "960000 1036800 1190400"
+    write /sys/kernel/cpu_input_boost/enabled 1
+
     write /proc/sys/vm/dirty_expire_centisecs 1000
     write /proc/sys/vm/dirty_writeback_centisecs 1500
 
