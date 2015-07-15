@@ -27,7 +27,7 @@ import java.io.File;
  */
 public class SunlightEnhancement {
 
-    private static String FILE_SRE = "/sys/class/graphics/fb0/sre";
+    private static final String FILE_SRE = "/sys/class/graphics/fb0/sre";
 
     /**
      * Whether device supports SRE
@@ -45,11 +45,10 @@ public class SunlightEnhancement {
      * the operation failed while reading the status; true in any other case.
      */
     public static boolean isEnabled() {
-        if (Integer.parseInt(FileUtils.readOneLine(FILE_SRE)) == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        try {
+            return Integer.parseInt(FileUtils.readOneLine(FILE_SRE)) > 0;
+        } catch (Exception ignored) { }
+        return false;
     }
 
     /**
@@ -60,11 +59,7 @@ public class SunlightEnhancement {
      * failed; true in any other case.
      */
     public static boolean setEnabled(boolean status) {
-        if (status == true) {
-            return FileUtils.writeLine(FILE_SRE, "1");
-        } else {
-            return FileUtils.writeLine(FILE_SRE, "0");
-        }
+        return FileUtils.writeLine(FILE_SRE, status ? "2" : "0");
     }
 
     /**
@@ -73,6 +68,6 @@ public class SunlightEnhancement {
      * @return boolean False if adaptive backlight is not a dependency
      */
     public static boolean isAdaptiveBacklightRequired() {
-        return true;
+        return false;
     }
 }
