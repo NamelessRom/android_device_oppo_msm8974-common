@@ -102,6 +102,7 @@
         <item>4</item>
         <item>5</item>
         <item>7</item>
+        <item>9</item>
     </integer-array>
 
     <!-- Boolean indicddating if restoring network selection should be skipped -->
