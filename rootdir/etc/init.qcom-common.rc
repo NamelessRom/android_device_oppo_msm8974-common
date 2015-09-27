@@ -528,7 +528,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 #    keycodes 114 115 116
 
 service mpdecision /system/bin/mpdecision --avg_comp
-    class main
+    class late_start
     user root
     group root system
 
