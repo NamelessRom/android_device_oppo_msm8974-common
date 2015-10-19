@@ -17,8 +17,10 @@
 # inherit from Oppo common
 -include device/oppo/common/BoardConfigCommon.mk
 
+PLATFORM_PATH := device/oppo/msm8974-common
+
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := device/oppo/msm8974-common/include
+TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
@@ -69,8 +71,8 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CM Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
-    device/oppo/msm8974-common/cmhw
+BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Graphics
 USE_OPENGL_RENDERER := true
@@ -121,7 +123,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_NO_RPC := true
 
 # GPS HAL lives here
-TARGET_GPS_HAL_PATH := device/oppo/msm8974-common/gps
+TARGET_GPS_HAL_PATH := $(PLATFORM_PATH)/gps
 TARGET_PROVIDES_GPS_LOC_API := true
 
 # QCRIL
@@ -159,7 +161,6 @@ endif
 # qcom sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-        device/oppo/msm8974-common/sepolicy
+BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 -include vendor/oppo/msm8974-common/BoardConfigVendor.mk
