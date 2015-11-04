@@ -75,22 +75,17 @@ BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Graphics
-USE_OPENGL_RENDERER := true
-TARGET_USES_ION := true
-TARGET_CONTINUOUS_SPLASH_ENABLED := true
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 HAVE_ADRENO_SOURCE := false
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-
-# Shader cache config options
-# Maximum size of the  GLES Shaders that can be cached for reuse.
-# Increase the size if shaders of size greater than 12KB are used.
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
-
-# Maximum GLES shader cache size for each app to store the compiled shader
-# binaries. Decrease the size if RAM or Flash Storage size is a limitation
-# of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
+TARGET_CONTINUOUS_SPLASH_ENABLED := true
+TARGET_USE_COMPAT_GRALLOC_PERFORM := true
+TARGET_USES_ION := true
+USE_OPENGL_RENDERER := true
+VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
