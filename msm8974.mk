@@ -213,6 +213,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.use_data_netmgrd=true \
     persist.data.netmgrd.qos.enable=true \
     persist.data.tcpackprio.enable=true \
+    persist.data.qmi.adb_logmask=0 \
     ro.data.large_tcp_window_size=true \
     telephony.lteOnGsmDevice=1 \
     wifi.interface=wlan0 \
