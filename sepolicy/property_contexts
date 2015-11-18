@@ -1,0 +1,2 @@
+# Timekeep
+persist.sys.timeadjust      u:object_r:timekeep_prop:s0
