@@ -200,6 +200,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # System properties
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
+    persist.mdpcomp_perfhint=50 \
     persist.timed.enable=true \
     ro.opengles.version=196608 \
     ro.qualcomm.bt.hci_transport=smd \
