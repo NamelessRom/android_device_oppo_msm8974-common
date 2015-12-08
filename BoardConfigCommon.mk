@@ -138,7 +138,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 PROTOBUF_SUPPORTED := true
 
 # ANT+
-#BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
