@@ -69,6 +69,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.pcm.16bit.enable=true \
     audio.offload.pcm.24bit.enable=true
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
