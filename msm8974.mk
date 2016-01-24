@@ -104,10 +104,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.msm8974
 
-# IO Scheduler
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.io.scheduler=bfq
-
 # IPC router config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
