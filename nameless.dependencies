@@ -16,5 +16,11 @@
     "repository": "NamelessRom/android_hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep",
     "revision": "n-3.0"
+  },
+  {
+    "remote": "github",
+    "repository": "NamelessRom/android_hardware_qcom_display",
+    "target_path": "hardware/qcom/display-caf/msm8974",
+    "revision": "n-3.0-caf-8974"
   }
 ]
