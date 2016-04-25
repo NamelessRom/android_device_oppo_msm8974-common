@@ -68,6 +68,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.pcm.16bit.enable=true \
     audio.offload.pcm.24bit.enable=true \
     audio_hal.period_size=192 \
+    audio.deep_buffer.media=true \
 
 # Camera
 PRODUCT_PACKAGES += \
