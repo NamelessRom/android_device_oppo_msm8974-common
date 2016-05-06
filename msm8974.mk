@@ -188,7 +188,7 @@ PRODUCT_BOOT_JARS += WfdCommon
 endif
 
 # Enable Bluetooth HFP service
-PRODUCT_PROPERTY_OVERRIDES +=
+PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1
 
 # System properties
