@@ -171,4 +171,9 @@ include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
+# QCNE
+BOARD_USES_QCNE := true
+TARGET_LDPRELOAD := libNimsWrap.so
+
+# Inherit from the proprietary version
 -include vendor/oppo/msm8974-common/BoardConfigVendor.mk
