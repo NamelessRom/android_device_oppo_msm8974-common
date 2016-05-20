@@ -70,6 +70,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio_hal.period_size=192 \
     audio.deep_buffer.media=true \
 
+# Browser
+PRODUCT_PACKAGES += \
+    Gello
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
