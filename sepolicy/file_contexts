@@ -12,6 +12,3 @@
 # BT/WiFi MAC
 /persist/.genmac                                        u:object_r:wifi_data_file:s0
 /persist/.bt_nv.bin                                     u:object_r:bluetooth_data_file:s0
-
-# Timekeep
-/system/bin/timekeep                                    u:object_r:timekeep_exec:s0

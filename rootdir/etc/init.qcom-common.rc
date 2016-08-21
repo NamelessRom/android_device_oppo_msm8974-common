@@ -236,6 +236,9 @@ on post-fs-data
     mkdir /data/shared 0755
     chown system system /data/shared
 
+    # Create /data/time folder for time-services
+    mkdir /data/time/ 0700 system system
+
     mkdir /data/audio/ 0770 media audio
 
     # kickstart
@@ -509,12 +512,10 @@ service thermal-engine /system/vendor/bin/thermal-engine
     socket thermal-recv-client stream 0660 system system
     socket thermal-recv-passive-client stream 0666 system system
 
-service timekeep /system/bin/timekeep restore
+service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
-    oneshot
-    seclabel u:r:timekeep:s0
 
 on property:vold.decrypt=trigger_restart_framework
     start config_bt_addr
